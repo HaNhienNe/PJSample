@@ -42,3 +42,5 @@ C:\_01 Study\C#\PJSample\iFareData\obj\Debug\net6.0-windows\refint\iFareData.dll
 C:\_01 Study\C#\PJSample\iFareData\obj\Debug\net6.0-windows\iFareData.pdb
 C:\_01 Study\C#\PJSample\iFareData\obj\Debug\net6.0-windows\iFareData.genruntimeconfig.cache
 C:\_01 Study\C#\PJSample\iFareData\obj\Debug\net6.0-windows\ref\iFareData.dll
+C:\_01 Study\C#\PJSample\iFareData\obj\Debug\net6.0-windows\Views\demo\ProductWindow.g.cs
+C:\_01 Study\C#\PJSample\iFareData\obj\Debug\net6.0-windows\Views\demo\ProductWindow.baml

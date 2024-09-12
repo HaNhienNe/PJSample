@@ -9,8 +9,7 @@
 
   <ItemGroup>
     <Folder Include="Resources\" />
-    <Folder Include="ViewModels\" />
-    <Folder Include="Views\" />
+    <Folder Include="Views\windows\" />
   </ItemGroup>
 
   <ItemGroup>

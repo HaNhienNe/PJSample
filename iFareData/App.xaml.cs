@@ -26,15 +26,15 @@ namespace iFareData
         private void ConfigureServices(IServiceCollection services)
         {
             // Đăng ký interface và implementation
-            services.AddTransient<IAppInitializer, AppInitializer>();
+            services.AddSingleton<IAppInitializer, AppInitializer>();
         }
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
 
             // Lấy FileInitializer từ DI container
-            var fileInitializer = _serviceProvider.GetService<IAppInitializer>();
-            fileInitializer.InitializeFoldersAndFiles();
+            var appInitializer = _serviceProvider.GetService<IAppInitializer>();
+            appInitializer.InitializeFoldersAndFiles();
         }
     }
 }

@@ -44,3 +44,5 @@ C:\_01 Study\C#\PJSample\iFareData\obj\Debug\net6.0-windows\iFareData.genruntime
 C:\_01 Study\C#\PJSample\iFareData\obj\Debug\net6.0-windows\ref\iFareData.dll
 C:\_01 Study\C#\PJSample\iFareData\obj\Debug\net6.0-windows\Views\demo\ProductWindow.g.cs
 C:\_01 Study\C#\PJSample\iFareData\obj\Debug\net6.0-windows\Views\demo\ProductWindow.baml
+C:\_01 Study\C#\PJSample\iFareData\obj\Debug\net6.0-windows\Views\demo\IFareDataWindow.g.cs
+C:\_01 Study\C#\PJSample\iFareData\obj\Debug\net6.0-windows\Views\demo\IFareDataWindow.baml

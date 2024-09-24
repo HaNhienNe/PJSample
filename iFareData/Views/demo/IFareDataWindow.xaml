@@ -1,0 +1,109 @@
+﻿<Window x:Class="iFareData.Views.demo.IFareDataWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="IFareDataWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style x:Key="Body_Content_DataGrid_Centering"
+               TargetType="{x:Type DataGridCell}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DataGridCell}">
+                        <Grid Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="header_style" TargetType="DataGridColumnHeader">
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="0,0,1,1"/>
+            <Setter Property="Background" Value="LightBlue"/>
+            <Setter Property="Padding" Value="5"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <StackPanel Margin="10">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Height="200">
+                <DataGrid
+                    x:Name="MyDataGrid"
+                    ItemsSource="{Binding}"
+                    HeadersVisibility="Column"
+                    AutoGenerateColumns="False"
+                    SelectionUnit="CellOrRowHeader"
+                    BorderBrush="Black"
+                    BorderThickness="1, 1, 0, 0"
+                    IsReadOnly="True"
+                    ScrollViewer.CanContentScroll="False" 
+                    ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                    ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                    CellStyle="{StaticResource Body_Content_DataGrid_Centering}"
+                    ColumnHeaderStyle="{StaticResource header_style}"
+                    RowHeight="28"
+                    CanUserAddRows="False">
+                    <DataGrid.Resources>
+                        
+                        <Style TargetType="DataGridColumnHeader" x:Key="NoRightBorderHeaderStyle">
+                            <Setter Property="BorderThickness" Value="0"/>
+                            <Setter Property="BorderBrush" Value="Black"/>
+                            <Setter Property="BorderThickness" Value="0,0,0,0.5"/>
+                            <Setter Property="Padding" Value="5"/>
+                        </Style>
+                        <Style TargetType="DataGridRow">
+                            <Setter Property="Background" Value="White"/>
+                            <!-- Màu nền mặc định -->
+                            <Setter Property="Foreground" Value="Black"/>
+                            <!-- Màu chữ mặc định -->
+                            <Style.Triggers>
+                                <!-- Khi row được chọn, đổi nền thành đỏ -->
+                                <Trigger Property="IsSelected" Value="True">
+                                    <Setter Property="Background" Value="Red"/>
+                                    <Setter Property="Foreground" Value="White"/>
+                                    <!-- Đổi màu chữ nếu cần -->
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </DataGrid.Resources>
+                    <DataGrid.Columns>
+                        <DataGridTemplateColumn Width="Auto">
+                            <DataGridTemplateColumn.HeaderTemplate>
+                                <DataTemplate>
+                                    <CheckBox x:Name="SelectAllCheckBox" Checked="SelectAllCheckBox_Checked" Unchecked="SelectAllCheckBox_Unchecked"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.HeaderTemplate>
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <CheckBox IsChecked="{Binding IsSelected, Mode=TwoWay}" 
+                                              Checked="RowCheckBox_Checked"
+                                              Unchecked="RowCheckBox_Unchecked"
+                                              HorizontalAlignment="Center" 
+                                              VerticalAlignment="Center"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTextColumn Header="first name" Binding="{Binding FirstName}" Width="3*"/>
+                        <DataGridTextColumn Header="last name" Binding="{Binding LastName}" Width="*">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="HorizontalAlignment" Value="Center" />
+                                    <Setter Property="VerticalAlignment" Value="Center" />
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+                        <DataGridTextColumn Header="city" Binding="{Binding City}" HeaderStyle="{StaticResource NoRightBorderHeaderStyle}" Width="*">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="HorizontalAlignment" Value="Center" />
+                                    <Setter Property="VerticalAlignment" Value="Center" />
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </ScrollViewer>
+        </StackPanel>
+    </Grid>
+</Window>

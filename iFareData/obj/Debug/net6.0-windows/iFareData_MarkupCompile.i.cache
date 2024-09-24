@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\_01 Study\C#\PJSample\iFareData\App.xaml
-2317820818
+3535183742
 
-191219325299
+20-259771412
 209-1412080195
-MainWindow.xaml;Views\demo\ProductWindow.xaml;
+MainWindow.xaml;Views\demo\IFareDataWindow.xaml;Views\demo\ProductWindow.xaml;
 
 True
 

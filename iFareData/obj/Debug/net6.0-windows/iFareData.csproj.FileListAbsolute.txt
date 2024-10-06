@@ -46,3 +46,5 @@ C:\_01 Study\C#\PJSample\iFareData\obj\Debug\net6.0-windows\Views\demo\ProductWi
 C:\_01 Study\C#\PJSample\iFareData\obj\Debug\net6.0-windows\Views\demo\ProductWindow.baml
 C:\_01 Study\C#\PJSample\iFareData\obj\Debug\net6.0-windows\Views\demo\IFareDataWindow.g.cs
 C:\_01 Study\C#\PJSample\iFareData\obj\Debug\net6.0-windows\Views\demo\IFareDataWindow.baml
+C:\_01 Study\C#\PJSample\iFareData\obj\Debug\net6.0-windows\Views\demo\demo1.g.cs
+C:\_01 Study\C#\PJSample\iFareData\obj\Debug\net6.0-windows\Views\demo\demo1.baml

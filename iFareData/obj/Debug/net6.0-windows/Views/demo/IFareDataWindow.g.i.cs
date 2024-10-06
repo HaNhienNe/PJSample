@@ -60,7 +60,7 @@ namespace iFareData.Views.demo {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/iFareData;component/views/demo/ifaredatawindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/iFareData;V1.0.0.0;component/views/demo/ifaredatawindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\demo\IFareDataWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
